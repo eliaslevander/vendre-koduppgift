@@ -142,12 +142,6 @@ const handleBlur = () => {
   text-align: center;
   font-weight: 700;
   font-size: var(--h3-mobile);
-  @media screen and (min-width: 767px) {
-    font-size: var(--h3-desktop);
-  }
-  @media screen and (min-width: 1366px) {
-    font-size: var(--h3-mobile);
-  }
   @media screen and (min-width: 1440px) {
     font-size: var(--h3-desktop);
   }
