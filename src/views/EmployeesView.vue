@@ -61,8 +61,9 @@ onMounted(() => {
     </p>
     <section id="employee-container">
       <!-- Iterate through all the employees with v-for and send the values to the component as props -->
+      <!-- Send index as a tabindex prop, needed to be able to target the mail using tab -->
       <EmployeeCard
-        v-for="employee in employees"
+        v-for="(employee, index) in employees"
         :key="employee.id"
         :="{
           firstName: employee.first_name,
@@ -70,6 +71,7 @@ onMounted(() => {
           avatar: employee.avatar,
           id: employee.id,
           email: employee.email,
+          tabindex: index,
         }"
       />
     </section>
@@ -120,9 +122,10 @@ onMounted(() => {
   }
 
   @media screen and (min-width: 1025px) {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    width: 50vw;
+    width: 75vw;
+  }
+  @media screen and (min-width: 1367px) {
+    width: 60vw;
   }
 }
 </style>

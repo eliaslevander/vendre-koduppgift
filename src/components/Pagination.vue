@@ -22,28 +22,38 @@ const isActive = (page: number) => {
 
 <template>
   <div id="wrapper">
-    <div class="pagination-container">
+    <nav class="pagination-container" aria-label="Pagination">
       <button
         class="pagination-button"
         @click="handleClick(props.currentPage - 1)"
         :disabled="props.currentPage === 1"
+        aria-label="Previous page"
       >
         <Icon icon="mdi:chevron-left" width="40" />
       </button>
-      <span class="page-selector" :class="isActive(1)" @click="handleClick(1)"
+      <span
+        class="page-selector"
+        :class="isActive(1)"
+        @click="handleClick(1)"
+        aria-label="Go to page 1"
         >1</span
       >
-      <span class="page-selector" :class="isActive(2)" @click="handleClick(2)"
+      <span
+        class="page-selector"
+        :class="isActive(2)"
+        @click="handleClick(2)"
+        aria-label="Go to page 2"
         >2</span
       >
       <button
         class="pagination-button"
         @click="handleClick(props.currentPage + 1)"
         :disabled="props.currentPage === 2"
+        aria-label="Next page"
       >
         <Icon icon="mdi:chevron-right" width="40" />
       </button>
-    </div>
+    </nav>
   </div>
 </template>
 
@@ -96,8 +106,8 @@ const isActive = (page: number) => {
 }
 
 .page-selector.active {
-  background-color: #5333ed;
-  box-shadow: 0px 0px 10px #5e4ac2;
+  background-color: var(--color-primary);
+  box-shadow: 0px 0px 10px var(--color-primary);
   color: #fff;
   text-decoration: underline;
 }
