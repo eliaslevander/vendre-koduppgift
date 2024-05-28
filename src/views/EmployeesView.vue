@@ -115,7 +115,7 @@ onMounted(() => {
   padding: 2vw;
 
   margin: 0 auto 2vh;
-
+  max-width: 1000px;
   @media screen and (min-width: 769px) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
