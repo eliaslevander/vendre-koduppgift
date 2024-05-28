@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// ref for state management, onMounted to do stuff when view is loaded
+// ref for state management, onMounted to do stuff when view is mounted
 import { ref, onMounted } from "vue";
 
 // -----------------Axios for simple data fetching-----------------
@@ -31,7 +31,6 @@ const fetchEmployees = async (page: number, updatePage = true) => {
       `https://reqres.in/api/users?page=${page}`
     );
     employees.value = await response.data.data;
-    console.log(employees.value);
     if (updatePage) {
       currentPage.value = page;
     }
