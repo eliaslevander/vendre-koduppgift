@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Basic", sans-serif;
+
+  --h1-desktop: 3.655rem;
+  --h2-desktop: 3.046rem;
+  --h3-desktop: 2.0736rem;
+
+  --h1-mobile: 2.0736rem;
+  --h2-mobile: 1.728rem;
+  --h3-mobile: 1.44rem;
+
+  --p-mobile: 1.2rem;
+  --p-desktop: 1.728rem;
+}
